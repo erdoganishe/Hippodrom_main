@@ -1,0 +1,11 @@
+C:\Users\khoty\Desktop\учеба 3.0\бд\курсач\Real_project\hippodrom\Hippodrom_main\IS Hyppodrom\obj\Debug\IS Hyppodrom.csproj.AssemblyReference.cache
+C:\Users\khoty\Desktop\учеба 3.0\бд\курсач\Real_project\hippodrom\Hippodrom_main\IS Hyppodrom\obj\Debug\IS Hyppodrom.csproj.SuggestedBindingRedirects.cache
+C:\Users\khoty\Desktop\учеба 3.0\бд\курсач\Real_project\hippodrom\Hippodrom_main\IS Hyppodrom\obj\Debug\IS_Hyppodrom.Main_form.resources
+C:\Users\khoty\Desktop\учеба 3.0\бд\курсач\Real_project\hippodrom\Hippodrom_main\IS Hyppodrom\obj\Debug\IS_Hyppodrom.Properties.Resources.resources
+C:\Users\khoty\Desktop\учеба 3.0\бд\курсач\Real_project\hippodrom\Hippodrom_main\IS Hyppodrom\obj\Debug\IS Hyppodrom.csproj.GenerateResource.cache
+C:\Users\khoty\Desktop\учеба 3.0\бд\курсач\Real_project\hippodrom\Hippodrom_main\IS Hyppodrom\obj\Debug\IS Hyppodrom.csproj.CoreCompileInputs.cache
+C:\Users\khoty\Desktop\учеба 3.0\бд\курсач\Real_project\hippodrom\Hippodrom_main\IS Hyppodrom\bin\Debug\IS Hyppodrom.exe.config
+C:\Users\khoty\Desktop\учеба 3.0\бд\курсач\Real_project\hippodrom\Hippodrom_main\IS Hyppodrom\bin\Debug\IS Hyppodrom.exe
+C:\Users\khoty\Desktop\учеба 3.0\бд\курсач\Real_project\hippodrom\Hippodrom_main\IS Hyppodrom\bin\Debug\IS Hyppodrom.pdb
+C:\Users\khoty\Desktop\учеба 3.0\бд\курсач\Real_project\hippodrom\Hippodrom_main\IS Hyppodrom\obj\Debug\IS Hyppodrom.exe
+C:\Users\khoty\Desktop\учеба 3.0\бд\курсач\Real_project\hippodrom\Hippodrom_main\IS Hyppodrom\obj\Debug\IS Hyppodrom.pdb
