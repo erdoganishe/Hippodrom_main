@@ -31,5 +31,14 @@ namespace IS_Hyppodrom
             this.raceTableAdapter.Fill(this.hyppodromDataSet.Race);
 
         }
+
+        private void Main_form_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            betTableAdapter.Update(hyppodromDataSet.Bet);
+            resTableAdapter.Update(hyppodromDataSet.Res);
+            cynologistTableAdapter.Update(hyppodromDataSet.Cynologist);
+            horseTableAdapter.Update(hyppodromDataSet.Horse);
+            raceTableAdapter.Update(hyppodromDataSet.Race);
+        }
     }
 }

@@ -1151,6 +1151,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Name = "Main_form";
             this.Text = "Main_form";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Main_form_FormClosing);
             this.Load += new System.EventHandler(this.Main_form_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
