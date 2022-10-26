@@ -76,5 +76,17 @@ namespace IS_Hyppodrom
             dataGridView1.DataSource = resBindingSource;
             label1.Text = "Results";
         }
+
+        private void resetelmentToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var show_table = new Show_tables_form();
+            show_table.ShowDialog();
+            horseTableAdapter.Fill(hyppodromDataSet.Horse);
+            betTableAdapter.Fill(hyppodromDataSet.Bet);
+            raceTableAdapter.Fill(hyppodromDataSet.Race);
+            cynologistTableAdapter.Fill(hyppodromDataSet.Cynologist);
+            resTableAdapter.Fill(hyppodromDataSet.Res);
+
+        }
     }
 }
