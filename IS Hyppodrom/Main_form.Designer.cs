@@ -137,6 +137,13 @@
             this.bindingNavigatorSeparator14 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorAddNewItem4 = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorDeleteItem4 = new System.Windows.Forms.ToolStripButton();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.raceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.horseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cynologistsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.betsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.resultsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hyppodromDataSet)).BeginInit();
@@ -159,6 +166,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.resBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator5)).BeginInit();
             this.bindingNavigator5.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -1134,6 +1142,60 @@
             this.bindingNavigatorDeleteItem4.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorDeleteItem4.Text = "Удалить";
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem1});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1384, 28);
+            this.menuStrip1.TabIndex = 10;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.raceToolStripMenuItem,
+            this.horseToolStripMenuItem,
+            this.cynologistsToolStripMenuItem,
+            this.betsToolStripMenuItem,
+            this.resultsToolStripMenuItem});
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(86, 24);
+            this.toolStripMenuItem1.Text = "Database";
+            // 
+            // raceToolStripMenuItem
+            // 
+            this.raceToolStripMenuItem.Name = "raceToolStripMenuItem";
+            this.raceToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.raceToolStripMenuItem.Text = "Races";
+            // 
+            // horseToolStripMenuItem
+            // 
+            this.horseToolStripMenuItem.Name = "horseToolStripMenuItem";
+            this.horseToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.horseToolStripMenuItem.Text = "Horses";
+            this.horseToolStripMenuItem.Click += new System.EventHandler(this.horseToolStripMenuItem_Click);
+            // 
+            // cynologistsToolStripMenuItem
+            // 
+            this.cynologistsToolStripMenuItem.Name = "cynologistsToolStripMenuItem";
+            this.cynologistsToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.cynologistsToolStripMenuItem.Text = "Cynologists";
+            // 
+            // betsToolStripMenuItem
+            // 
+            this.betsToolStripMenuItem.Name = "betsToolStripMenuItem";
+            this.betsToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.betsToolStripMenuItem.Text = "Bets";
+            // 
+            // resultsToolStripMenuItem
+            // 
+            this.resultsToolStripMenuItem.Name = "resultsToolStripMenuItem";
+            this.resultsToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.resultsToolStripMenuItem.Text = "Results";
+            // 
             // Main_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1148,6 +1210,7 @@
             this.Controls.Add(this.bindingNavigator2);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.bindingNavigator1);
+            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.dataGridView1);
             this.Name = "Main_form";
             this.Text = "Main_form";
@@ -1180,6 +1243,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator5)).EndInit();
             this.bindingNavigator5.ResumeLayout(false);
             this.bindingNavigator5.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1294,5 +1359,12 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem4;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem4;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator14;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem raceToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem horseToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cynologistsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem betsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem resultsToolStripMenuItem;
     }
 }

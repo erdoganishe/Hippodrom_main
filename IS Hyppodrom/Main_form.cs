@@ -40,5 +40,10 @@ namespace IS_Hyppodrom
             horseTableAdapter.Update(hyppodromDataSet.Horse);
             raceTableAdapter.Update(hyppodromDataSet.Race);
         }
+
+        private void horseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
