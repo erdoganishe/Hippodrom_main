@@ -88,5 +88,10 @@ namespace IS_Hyppodrom
             resTableAdapter.Fill(hyppodromDataSet.Res);
 
         }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

@@ -29,29 +29,30 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Show_tables_form));
             System.Windows.Forms.Label cynologist_idLabel;
             System.Windows.Forms.Label nameLabel;
             System.Windows.Forms.Label ageLabel;
             System.Windows.Forms.Label genderLabel;
             System.Windows.Forms.Label expirienceLabel;
             System.Windows.Forms.Label incomeLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Show_tables_form));
             this.hyppodromDataSet = new IS_Hyppodrom.HyppodromDataSet();
             this.cynologistBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cynologistTableAdapter = new IS_Hyppodrom.HyppodromDataSetTableAdapters.CynologistTableAdapter();
             this.tableAdapterManager = new IS_Hyppodrom.HyppodromDataSetTableAdapters.TableAdapterManager();
+            this.horseTableAdapter = new IS_Hyppodrom.HyppodromDataSetTableAdapters.HorseTableAdapter();
             this.cynologistBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.cynologistBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.cynologist_idTextBox = new System.Windows.Forms.TextBox();
             this.nameTextBox = new System.Windows.Forms.TextBox();
@@ -60,7 +61,6 @@
             this.expirienceTextBox = new System.Windows.Forms.TextBox();
             this.incomeTextBox = new System.Windows.Forms.TextBox();
             this.horseBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.horseTableAdapter = new IS_Hyppodrom.HyppodromDataSetTableAdapters.HorseTableAdapter();
             this.horseDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -84,6 +84,60 @@
             ((System.ComponentModel.ISupportInitialize)(this.horseBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.horseDataGridView)).BeginInit();
             this.SuspendLayout();
+            // 
+            // cynologist_idLabel
+            // 
+            cynologist_idLabel.AutoSize = true;
+            cynologist_idLabel.Location = new System.Drawing.Point(59, 59);
+            cynologist_idLabel.Name = "cynologist_idLabel";
+            cynologist_idLabel.Size = new System.Drawing.Size(85, 16);
+            cynologist_idLabel.TabIndex = 1;
+            cynologist_idLabel.Text = "cynologist id:";
+            // 
+            // nameLabel
+            // 
+            nameLabel.AutoSize = true;
+            nameLabel.Location = new System.Drawing.Point(59, 87);
+            nameLabel.Name = "nameLabel";
+            nameLabel.Size = new System.Drawing.Size(44, 16);
+            nameLabel.TabIndex = 3;
+            nameLabel.Text = "name:";
+            // 
+            // ageLabel
+            // 
+            ageLabel.AutoSize = true;
+            ageLabel.Location = new System.Drawing.Point(59, 115);
+            ageLabel.Name = "ageLabel";
+            ageLabel.Size = new System.Drawing.Size(34, 16);
+            ageLabel.TabIndex = 5;
+            ageLabel.Text = "age:";
+            // 
+            // genderLabel
+            // 
+            genderLabel.AutoSize = true;
+            genderLabel.Location = new System.Drawing.Point(59, 143);
+            genderLabel.Name = "genderLabel";
+            genderLabel.Size = new System.Drawing.Size(53, 16);
+            genderLabel.TabIndex = 7;
+            genderLabel.Text = "gender:";
+            // 
+            // expirienceLabel
+            // 
+            expirienceLabel.AutoSize = true;
+            expirienceLabel.Location = new System.Drawing.Point(59, 171);
+            expirienceLabel.Name = "expirienceLabel";
+            expirienceLabel.Size = new System.Drawing.Size(72, 16);
+            expirienceLabel.TabIndex = 9;
+            expirienceLabel.Text = "expirience:";
+            // 
+            // incomeLabel
+            // 
+            incomeLabel.AutoSize = true;
+            incomeLabel.Location = new System.Drawing.Point(59, 199);
+            incomeLabel.Name = "incomeLabel";
+            incomeLabel.Size = new System.Drawing.Size(54, 16);
+            incomeLabel.TabIndex = 11;
+            incomeLabel.Text = "income:";
             // 
             // hyppodromDataSet
             // 
@@ -109,12 +163,17 @@
             this.tableAdapterManager.ResTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = IS_Hyppodrom.HyppodromDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
+            // horseTableAdapter
+            // 
+            this.horseTableAdapter.ClearBeforeFill = true;
+            // 
             // cynologistBindingNavigator
             // 
             this.cynologistBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
             this.cynologistBindingNavigator.BindingSource = this.cynologistBindingSource;
             this.cynologistBindingNavigator.CountItem = this.bindingNavigatorCountItem;
             this.cynologistBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
+            this.cynologistBindingNavigator.Dock = System.Windows.Forms.DockStyle.None;
             this.cynologistBindingNavigator.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.cynologistBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem,
@@ -129,16 +188,41 @@
             this.bindingNavigatorAddNewItem,
             this.bindingNavigatorDeleteItem,
             this.cynologistBindingNavigatorSaveItem});
-            this.cynologistBindingNavigator.Location = new System.Drawing.Point(0, 0);
+            this.cynologistBindingNavigator.Location = new System.Drawing.Point(9, 28);
             this.cynologistBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.cynologistBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
             this.cynologistBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
             this.cynologistBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.cynologistBindingNavigator.Name = "cynologistBindingNavigator";
             this.cynologistBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.cynologistBindingNavigator.Size = new System.Drawing.Size(1263, 27);
+            this.cynologistBindingNavigator.Size = new System.Drawing.Size(341, 27);
             this.cynologistBindingNavigator.TabIndex = 0;
             this.cynologistBindingNavigator.Text = "bindingNavigator1";
+            // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorAddNewItem.Text = "Добавить";
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(55, 24);
+            this.bindingNavigatorCountItem.Text = "для {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Общее число элементов";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorDeleteItem.Text = "Удалить";
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -146,7 +230,7 @@
             this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
             this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(29, 22);
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorMoveFirstItem.Text = "Переместить в начало";
             // 
             // bindingNavigatorMovePreviousItem
@@ -155,34 +239,28 @@
             this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
             this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
             this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(29, 22);
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorMovePreviousItem.Text = "Переместить назад";
             // 
             // bindingNavigatorSeparator
             // 
             this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 25);
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 27);
             // 
             // bindingNavigatorPositionItem
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Положение";
             this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 27);
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Текущее положение";
             // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(55, 20);
-            this.bindingNavigatorCountItem.Text = "для {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Общее число элементов";
-            // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 6);
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 27);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -204,44 +282,17 @@
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 6);
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(29, 24);
-            this.bindingNavigatorAddNewItem.Text = "Добавить";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(29, 24);
-            this.bindingNavigatorDeleteItem.Text = "Удалить";
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 27);
             // 
             // cynologistBindingNavigatorSaveItem
             // 
             this.cynologistBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.cynologistBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("cynologistBindingNavigatorSaveItem.Image")));
             this.cynologistBindingNavigatorSaveItem.Name = "cynologistBindingNavigatorSaveItem";
-            this.cynologistBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 23);
+            this.cynologistBindingNavigatorSaveItem.Size = new System.Drawing.Size(29, 24);
             this.cynologistBindingNavigatorSaveItem.Text = "Сохранить данные";
             this.cynologistBindingNavigatorSaveItem.Click += new System.EventHandler(this.cynologistBindingNavigatorSaveItem_Click);
-            // 
-            // cynologist_idLabel
-            // 
-            cynologist_idLabel.AutoSize = true;
-            cynologist_idLabel.Location = new System.Drawing.Point(59, 59);
-            cynologist_idLabel.Name = "cynologist_idLabel";
-            cynologist_idLabel.Size = new System.Drawing.Size(85, 16);
-            cynologist_idLabel.TabIndex = 1;
-            cynologist_idLabel.Text = "cynologist id:";
             // 
             // cynologist_idTextBox
             // 
@@ -251,15 +302,6 @@
             this.cynologist_idTextBox.Size = new System.Drawing.Size(100, 22);
             this.cynologist_idTextBox.TabIndex = 2;
             // 
-            // nameLabel
-            // 
-            nameLabel.AutoSize = true;
-            nameLabel.Location = new System.Drawing.Point(59, 87);
-            nameLabel.Name = "nameLabel";
-            nameLabel.Size = new System.Drawing.Size(44, 16);
-            nameLabel.TabIndex = 3;
-            nameLabel.Text = "name:";
-            // 
             // nameTextBox
             // 
             this.nameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cynologistBindingSource, "name", true));
@@ -267,15 +309,6 @@
             this.nameTextBox.Name = "nameTextBox";
             this.nameTextBox.Size = new System.Drawing.Size(100, 22);
             this.nameTextBox.TabIndex = 4;
-            // 
-            // ageLabel
-            // 
-            ageLabel.AutoSize = true;
-            ageLabel.Location = new System.Drawing.Point(59, 115);
-            ageLabel.Name = "ageLabel";
-            ageLabel.Size = new System.Drawing.Size(34, 16);
-            ageLabel.TabIndex = 5;
-            ageLabel.Text = "age:";
             // 
             // ageTextBox
             // 
@@ -285,15 +318,6 @@
             this.ageTextBox.Size = new System.Drawing.Size(100, 22);
             this.ageTextBox.TabIndex = 6;
             // 
-            // genderLabel
-            // 
-            genderLabel.AutoSize = true;
-            genderLabel.Location = new System.Drawing.Point(59, 143);
-            genderLabel.Name = "genderLabel";
-            genderLabel.Size = new System.Drawing.Size(53, 16);
-            genderLabel.TabIndex = 7;
-            genderLabel.Text = "gender:";
-            // 
             // genderTextBox
             // 
             this.genderTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cynologistBindingSource, "gender", true));
@@ -302,15 +326,6 @@
             this.genderTextBox.Size = new System.Drawing.Size(100, 22);
             this.genderTextBox.TabIndex = 8;
             // 
-            // expirienceLabel
-            // 
-            expirienceLabel.AutoSize = true;
-            expirienceLabel.Location = new System.Drawing.Point(59, 171);
-            expirienceLabel.Name = "expirienceLabel";
-            expirienceLabel.Size = new System.Drawing.Size(72, 16);
-            expirienceLabel.TabIndex = 9;
-            expirienceLabel.Text = "expirience:";
-            // 
             // expirienceTextBox
             // 
             this.expirienceTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cynologistBindingSource, "expirience", true));
@@ -318,15 +333,6 @@
             this.expirienceTextBox.Name = "expirienceTextBox";
             this.expirienceTextBox.Size = new System.Drawing.Size(100, 22);
             this.expirienceTextBox.TabIndex = 10;
-            // 
-            // incomeLabel
-            // 
-            incomeLabel.AutoSize = true;
-            incomeLabel.Location = new System.Drawing.Point(59, 199);
-            incomeLabel.Name = "incomeLabel";
-            incomeLabel.Size = new System.Drawing.Size(54, 16);
-            incomeLabel.TabIndex = 11;
-            incomeLabel.Text = "income:";
             // 
             // incomeTextBox
             // 
@@ -340,10 +346,6 @@
             // 
             this.horseBindingSource.DataMember = "FK_Horse_Cynologist";
             this.horseBindingSource.DataSource = this.cynologistBindingSource;
-            // 
-            // horseTableAdapter
-            // 
-            this.horseTableAdapter.ClearBeforeFill = true;
             // 
             // horseDataGridView
             // 
