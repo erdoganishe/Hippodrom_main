@@ -29,6 +29,7 @@ namespace IS_Hyppodrom
             this.horseTableAdapter.Fill(this.hyppodromDataSet.Horse);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "hyppodromDataSet.Race". При необходимости она может быть перемещена или удалена.
             this.raceTableAdapter.Fill(this.hyppodromDataSet.Race);
+            dataGridView1.AutoGenerateColumns = true;
 
         }
 
@@ -43,7 +44,37 @@ namespace IS_Hyppodrom
 
         private void horseToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            bindingNavigator1.BindingSource = horseBindingSource;
+            dataGridView1.DataSource = horseBindingSource;
+            label1.Text = "Horses";
+        }
 
+        private void raceToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            bindingNavigator1.BindingSource = raceBindingSource;
+            dataGridView1.DataSource = raceBindingSource;
+            label1.Text = "Races";
+        }
+
+        private void cynologistsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            bindingNavigator1.BindingSource = cynologistBindingSource;
+            dataGridView1.DataSource = cynologistBindingSource;
+            label1.Text = "Cynologists";
+        }
+
+        private void betsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            bindingNavigator1.BindingSource = betBindingSource;
+            dataGridView1.DataSource = betBindingSource;
+            label1.Text = "Bets";
+        }
+
+        private void resultsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            bindingNavigator1.BindingSource = resBindingSource;
+            dataGridView1.DataSource = resBindingSource;
+            label1.Text = "Results";
         }
     }
 }
