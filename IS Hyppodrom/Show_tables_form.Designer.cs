@@ -60,8 +60,8 @@
             this.genderTextBox = new System.Windows.Forms.TextBox();
             this.expirienceTextBox = new System.Windows.Forms.TextBox();
             this.incomeTextBox = new System.Windows.Forms.TextBox();
-            this.horseBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.horseDataGridView = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -70,7 +70,7 @@
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button1 = new System.Windows.Forms.Button();
+            this.horseBindingSource = new System.Windows.Forms.BindingSource(this.components);
             cynologist_idLabel = new System.Windows.Forms.Label();
             nameLabel = new System.Windows.Forms.Label();
             ageLabel = new System.Windows.Forms.Label();
@@ -81,8 +81,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.cynologistBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cynologistBindingNavigator)).BeginInit();
             this.cynologistBindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.horseBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.horseDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.horseBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // cynologist_idLabel
@@ -342,11 +342,6 @@
             this.incomeTextBox.Size = new System.Drawing.Size(100, 22);
             this.incomeTextBox.TabIndex = 12;
             // 
-            // horseBindingSource
-            // 
-            this.horseBindingSource.DataMember = "FK_Horse_Cynologist";
-            this.horseBindingSource.DataSource = this.cynologistBindingSource;
-            // 
             // horseDataGridView
             // 
             this.horseDataGridView.AutoGenerateColumns = false;
@@ -367,6 +362,16 @@
             this.horseDataGridView.RowTemplate.Height = 24;
             this.horseDataGridView.Size = new System.Drawing.Size(1239, 220);
             this.horseDataGridView.TabIndex = 13;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(528, 59);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(322, 23);
+            this.button1.TabIndex = 14;
+            this.button1.Text = "Confirm changes";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -432,15 +437,10 @@
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
             this.dataGridViewTextBoxColumn8.Width = 125;
             // 
-            // button1
+            // horseBindingSource
             // 
-            this.button1.Location = new System.Drawing.Point(528, 59);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(322, 23);
-            this.button1.TabIndex = 14;
-            this.button1.Text = "Confirm changes";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.horseBindingSource.DataMember = "FK_Horse_Cynologist";
+            this.horseBindingSource.DataSource = this.cynologistBindingSource;
             // 
             // Show_tables_form
             // 
@@ -470,8 +470,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.cynologistBindingNavigator)).EndInit();
             this.cynologistBindingNavigator.ResumeLayout(false);
             this.cynologistBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.horseBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.horseDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.horseBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

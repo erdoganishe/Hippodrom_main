@@ -30,18 +30,13 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main_form));
+            this.raceBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.hyppodromDataSet = new IS_Hyppodrom.HyppodromDataSet();
-            this.raceBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.raceTableAdapter = new IS_Hyppodrom.HyppodromDataSetTableAdapters.RaceTableAdapter();
             this.horseBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.horseTableAdapter = new IS_Hyppodrom.HyppodromDataSetTableAdapters.HorseTableAdapter();
             this.cynologistBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.cynologistTableAdapter = new IS_Hyppodrom.HyppodromDataSetTableAdapters.CynologistTableAdapter();
             this.betBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.betTableAdapter = new IS_Hyppodrom.HyppodromDataSetTableAdapters.BetTableAdapter();
             this.resBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.resTableAdapter = new IS_Hyppodrom.HyppodromDataSetTableAdapters.ResTableAdapter();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.raceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -49,14 +44,23 @@
             this.cynologistsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.betsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.resultsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.typeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.stateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.channelsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.participantsnumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.durationtimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.datetimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.raceidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.resetelmentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.queryeditToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editformToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.updateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.raceidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.datetimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.durationtimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.participantsnumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.channelsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.typeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
@@ -70,13 +74,14 @@
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
             this.label1 = new System.Windows.Forms.Label();
-            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.resetelmentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.raceTableAdapter = new IS_Hyppodrom.HyppodromDataSetTableAdapters.RaceTableAdapter();
+            this.horseTableAdapter = new IS_Hyppodrom.HyppodromDataSetTableAdapters.HorseTableAdapter();
+            this.cynologistTableAdapter = new IS_Hyppodrom.HyppodromDataSetTableAdapters.CynologistTableAdapter();
+            this.betTableAdapter = new IS_Hyppodrom.HyppodromDataSetTableAdapters.BetTableAdapter();
+            this.resTableAdapter = new IS_Hyppodrom.HyppodromDataSetTableAdapters.ResTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.raceBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hyppodromDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.raceBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.horseBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cynologistBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.betBindingSource)).BeginInit();
@@ -86,6 +91,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // raceBindingSource
+            // 
+            this.raceBindingSource.DataMember = "Race";
+            this.raceBindingSource.DataSource = this.bindingSource1;
             // 
             // bindingSource1
             // 
@@ -97,50 +107,25 @@
             this.hyppodromDataSet.DataSetName = "HyppodromDataSet";
             this.hyppodromDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // raceBindingSource
-            // 
-            this.raceBindingSource.DataMember = "Race";
-            this.raceBindingSource.DataSource = this.bindingSource1;
-            // 
-            // raceTableAdapter
-            // 
-            this.raceTableAdapter.ClearBeforeFill = true;
-            // 
             // horseBindingSource
             // 
             this.horseBindingSource.DataMember = "Horse";
             this.horseBindingSource.DataSource = this.bindingSource1;
-            // 
-            // horseTableAdapter
-            // 
-            this.horseTableAdapter.ClearBeforeFill = true;
             // 
             // cynologistBindingSource
             // 
             this.cynologistBindingSource.DataMember = "Cynologist";
             this.cynologistBindingSource.DataSource = this.bindingSource1;
             // 
-            // cynologistTableAdapter
-            // 
-            this.cynologistTableAdapter.ClearBeforeFill = true;
-            // 
             // betBindingSource
             // 
             this.betBindingSource.DataMember = "Bet";
             this.betBindingSource.DataSource = this.bindingSource1;
             // 
-            // betTableAdapter
-            // 
-            this.betTableAdapter.ClearBeforeFill = true;
-            // 
             // resBindingSource
             // 
             this.resBindingSource.DataMember = "Res";
             this.resBindingSource.DataSource = this.bindingSource1;
-            // 
-            // resTableAdapter
-            // 
-            this.resTableAdapter.ClearBeforeFill = true;
             // 
             // menuStrip1
             // 
@@ -148,7 +133,8 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem1,
             this.fileToolStripMenuItem,
-            this.viewToolStripMenuItem});
+            this.viewToolStripMenuItem,
+            this.editformToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1384, 28);
@@ -170,93 +156,106 @@
             // raceToolStripMenuItem
             // 
             this.raceToolStripMenuItem.Name = "raceToolStripMenuItem";
-            this.raceToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.raceToolStripMenuItem.Size = new System.Drawing.Size(168, 26);
             this.raceToolStripMenuItem.Text = "Races";
             this.raceToolStripMenuItem.Click += new System.EventHandler(this.raceToolStripMenuItem_Click);
             // 
             // horseToolStripMenuItem
             // 
             this.horseToolStripMenuItem.Name = "horseToolStripMenuItem";
-            this.horseToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.horseToolStripMenuItem.Size = new System.Drawing.Size(168, 26);
             this.horseToolStripMenuItem.Text = "Horses";
             this.horseToolStripMenuItem.Click += new System.EventHandler(this.horseToolStripMenuItem_Click);
             // 
             // cynologistsToolStripMenuItem
             // 
             this.cynologistsToolStripMenuItem.Name = "cynologistsToolStripMenuItem";
-            this.cynologistsToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.cynologistsToolStripMenuItem.Size = new System.Drawing.Size(168, 26);
             this.cynologistsToolStripMenuItem.Text = "Cynologists";
             this.cynologistsToolStripMenuItem.Click += new System.EventHandler(this.cynologistsToolStripMenuItem_Click);
             // 
             // betsToolStripMenuItem
             // 
             this.betsToolStripMenuItem.Name = "betsToolStripMenuItem";
-            this.betsToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.betsToolStripMenuItem.Size = new System.Drawing.Size(168, 26);
             this.betsToolStripMenuItem.Text = "Bets";
             this.betsToolStripMenuItem.Click += new System.EventHandler(this.betsToolStripMenuItem_Click);
             // 
             // resultsToolStripMenuItem
             // 
             this.resultsToolStripMenuItem.Name = "resultsToolStripMenuItem";
-            this.resultsToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.resultsToolStripMenuItem.Size = new System.Drawing.Size(168, 26);
             this.resultsToolStripMenuItem.Text = "Results";
             this.resultsToolStripMenuItem.Click += new System.EventHandler(this.resultsToolStripMenuItem_Click);
             // 
-            // typeDataGridViewTextBoxColumn
+            // fileToolStripMenuItem
             // 
-            this.typeDataGridViewTextBoxColumn.DataPropertyName = "type";
-            this.typeDataGridViewTextBoxColumn.HeaderText = "type";
-            this.typeDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.typeDataGridViewTextBoxColumn.Name = "typeDataGridViewTextBoxColumn";
-            this.typeDataGridViewTextBoxColumn.Width = 125;
+            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.exitToolStripMenuItem});
+            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 24);
+            this.fileToolStripMenuItem.Text = "File";
             // 
-            // stateDataGridViewTextBoxColumn
+            // exitToolStripMenuItem
             // 
-            this.stateDataGridViewTextBoxColumn.DataPropertyName = "state";
-            this.stateDataGridViewTextBoxColumn.HeaderText = "state";
-            this.stateDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.stateDataGridViewTextBoxColumn.Name = "stateDataGridViewTextBoxColumn";
-            this.stateDataGridViewTextBoxColumn.Width = 125;
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(116, 26);
+            this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
-            // channelsDataGridViewTextBoxColumn
+            // viewToolStripMenuItem
             // 
-            this.channelsDataGridViewTextBoxColumn.DataPropertyName = "channels";
-            this.channelsDataGridViewTextBoxColumn.HeaderText = "channels";
-            this.channelsDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.channelsDataGridViewTextBoxColumn.Name = "channelsDataGridViewTextBoxColumn";
-            this.channelsDataGridViewTextBoxColumn.Width = 125;
+            this.viewToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.resetelmentToolStripMenuItem,
+            this.queryeditToolStripMenuItem});
+            this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
+            this.viewToolStripMenuItem.Size = new System.Drawing.Size(55, 24);
+            this.viewToolStripMenuItem.Text = "View";
             // 
-            // participantsnumberDataGridViewTextBoxColumn
+            // resetelmentToolStripMenuItem
             // 
-            this.participantsnumberDataGridViewTextBoxColumn.DataPropertyName = "participants_number";
-            this.participantsnumberDataGridViewTextBoxColumn.HeaderText = "participants_number";
-            this.participantsnumberDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.participantsnumberDataGridViewTextBoxColumn.Name = "participantsnumberDataGridViewTextBoxColumn";
-            this.participantsnumberDataGridViewTextBoxColumn.Width = 125;
+            this.resetelmentToolStripMenuItem.Name = "resetelmentToolStripMenuItem";
+            this.resetelmentToolStripMenuItem.Size = new System.Drawing.Size(179, 26);
+            this.resetelmentToolStripMenuItem.Text = "Resettelment";
+            this.resetelmentToolStripMenuItem.Click += new System.EventHandler(this.resetelmentToolStripMenuItem_Click);
             // 
-            // durationtimeDataGridViewTextBoxColumn
+            // queryeditToolStripMenuItem
             // 
-            this.durationtimeDataGridViewTextBoxColumn.DataPropertyName = "duration_time";
-            this.durationtimeDataGridViewTextBoxColumn.HeaderText = "duration_time";
-            this.durationtimeDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.durationtimeDataGridViewTextBoxColumn.Name = "durationtimeDataGridViewTextBoxColumn";
-            this.durationtimeDataGridViewTextBoxColumn.Width = 125;
+            this.queryeditToolStripMenuItem.Name = "queryeditToolStripMenuItem";
+            this.queryeditToolStripMenuItem.Size = new System.Drawing.Size(179, 26);
+            this.queryeditToolStripMenuItem.Text = "query_edit";
+            this.queryeditToolStripMenuItem.Click += new System.EventHandler(this.queryeditToolStripMenuItem_Click);
             // 
-            // datetimeDataGridViewTextBoxColumn
+            // editformToolStripMenuItem
             // 
-            this.datetimeDataGridViewTextBoxColumn.DataPropertyName = "date_time";
-            this.datetimeDataGridViewTextBoxColumn.HeaderText = "date_time";
-            this.datetimeDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.datetimeDataGridViewTextBoxColumn.Name = "datetimeDataGridViewTextBoxColumn";
-            this.datetimeDataGridViewTextBoxColumn.Width = 125;
+            this.editformToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.addToolStripMenuItem,
+            this.deleteToolStripMenuItem,
+            this.updateToolStripMenuItem});
+            this.editformToolStripMenuItem.Name = "editformToolStripMenuItem";
+            this.editformToolStripMenuItem.Size = new System.Drawing.Size(87, 24);
+            this.editformToolStripMenuItem.Text = "Edit_form";
             // 
-            // raceidDataGridViewTextBoxColumn
+            // addToolStripMenuItem
             // 
-            this.raceidDataGridViewTextBoxColumn.DataPropertyName = "race_id";
-            this.raceidDataGridViewTextBoxColumn.HeaderText = "race_id";
-            this.raceidDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.raceidDataGridViewTextBoxColumn.Name = "raceidDataGridViewTextBoxColumn";
-            this.raceidDataGridViewTextBoxColumn.Width = 125;
+            this.addToolStripMenuItem.Name = "addToolStripMenuItem";
+            this.addToolStripMenuItem.Size = new System.Drawing.Size(141, 26);
+            this.addToolStripMenuItem.Text = "Add";
+            this.addToolStripMenuItem.Click += new System.EventHandler(this.addToolStripMenuItem_Click);
+            // 
+            // deleteToolStripMenuItem
+            // 
+            this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(141, 26);
+            this.deleteToolStripMenuItem.Text = "Delete";
+            this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
+            // 
+            // updateToolStripMenuItem
+            // 
+            this.updateToolStripMenuItem.Name = "updateToolStripMenuItem";
+            this.updateToolStripMenuItem.Size = new System.Drawing.Size(141, 26);
+            this.updateToolStripMenuItem.Text = "Update";
+            this.updateToolStripMenuItem.Click += new System.EventHandler(this.updateToolStripMenuItem_Click);
             // 
             // dataGridView1
             // 
@@ -277,6 +276,62 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(1351, 319);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // raceidDataGridViewTextBoxColumn
+            // 
+            this.raceidDataGridViewTextBoxColumn.DataPropertyName = "race_id";
+            this.raceidDataGridViewTextBoxColumn.HeaderText = "race_id";
+            this.raceidDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.raceidDataGridViewTextBoxColumn.Name = "raceidDataGridViewTextBoxColumn";
+            this.raceidDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // datetimeDataGridViewTextBoxColumn
+            // 
+            this.datetimeDataGridViewTextBoxColumn.DataPropertyName = "date_time";
+            this.datetimeDataGridViewTextBoxColumn.HeaderText = "date_time";
+            this.datetimeDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.datetimeDataGridViewTextBoxColumn.Name = "datetimeDataGridViewTextBoxColumn";
+            this.datetimeDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // durationtimeDataGridViewTextBoxColumn
+            // 
+            this.durationtimeDataGridViewTextBoxColumn.DataPropertyName = "duration_time";
+            this.durationtimeDataGridViewTextBoxColumn.HeaderText = "duration_time";
+            this.durationtimeDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.durationtimeDataGridViewTextBoxColumn.Name = "durationtimeDataGridViewTextBoxColumn";
+            this.durationtimeDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // participantsnumberDataGridViewTextBoxColumn
+            // 
+            this.participantsnumberDataGridViewTextBoxColumn.DataPropertyName = "participants_number";
+            this.participantsnumberDataGridViewTextBoxColumn.HeaderText = "participants_number";
+            this.participantsnumberDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.participantsnumberDataGridViewTextBoxColumn.Name = "participantsnumberDataGridViewTextBoxColumn";
+            this.participantsnumberDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // channelsDataGridViewTextBoxColumn
+            // 
+            this.channelsDataGridViewTextBoxColumn.DataPropertyName = "channels";
+            this.channelsDataGridViewTextBoxColumn.HeaderText = "channels";
+            this.channelsDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.channelsDataGridViewTextBoxColumn.Name = "channelsDataGridViewTextBoxColumn";
+            this.channelsDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // stateDataGridViewTextBoxColumn
+            // 
+            this.stateDataGridViewTextBoxColumn.DataPropertyName = "state";
+            this.stateDataGridViewTextBoxColumn.HeaderText = "state";
+            this.stateDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.stateDataGridViewTextBoxColumn.Name = "stateDataGridViewTextBoxColumn";
+            this.stateDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // typeDataGridViewTextBoxColumn
+            // 
+            this.typeDataGridViewTextBoxColumn.DataPropertyName = "type";
+            this.typeDataGridViewTextBoxColumn.HeaderText = "type";
+            this.typeDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.typeDataGridViewTextBoxColumn.Name = "typeDataGridViewTextBoxColumn";
+            this.typeDataGridViewTextBoxColumn.Width = 125;
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -305,7 +360,6 @@
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Положение";
             this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 27);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -406,35 +460,25 @@
             this.label1.TabIndex = 11;
             this.label1.Text = "Races";
             // 
-            // fileToolStripMenuItem
+            // raceTableAdapter
             // 
-            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.exitToolStripMenuItem});
-            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 24);
-            this.fileToolStripMenuItem.Text = "File";
+            this.raceTableAdapter.ClearBeforeFill = true;
             // 
-            // exitToolStripMenuItem
+            // horseTableAdapter
             // 
-            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.exitToolStripMenuItem.Text = "Exit";
-            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            this.horseTableAdapter.ClearBeforeFill = true;
             // 
-            // viewToolStripMenuItem
+            // cynologistTableAdapter
             // 
-            this.viewToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.resetelmentToolStripMenuItem});
-            this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
-            this.viewToolStripMenuItem.Size = new System.Drawing.Size(55, 24);
-            this.viewToolStripMenuItem.Text = "View";
+            this.cynologistTableAdapter.ClearBeforeFill = true;
             // 
-            // resetelmentToolStripMenuItem
+            // betTableAdapter
             // 
-            this.resetelmentToolStripMenuItem.Name = "resetelmentToolStripMenuItem";
-            this.resetelmentToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.resetelmentToolStripMenuItem.Text = "Resettelment";
-            this.resetelmentToolStripMenuItem.Click += new System.EventHandler(this.resetelmentToolStripMenuItem_Click);
+            this.betTableAdapter.ClearBeforeFill = true;
+            // 
+            // resTableAdapter
+            // 
+            this.resTableAdapter.ClearBeforeFill = true;
             // 
             // Main_form
             // 
@@ -449,9 +493,9 @@
             this.Text = "Main_form";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Main_form_FormClosing);
             this.Load += new System.EventHandler(this.Main_form_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.raceBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hyppodromDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.raceBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.horseBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cynologistBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.betBindingSource)).EndInit();
@@ -512,5 +556,10 @@
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem resetelmentToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem queryeditToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem editformToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem updateToolStripMenuItem;
     }
 }

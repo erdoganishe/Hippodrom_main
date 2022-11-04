@@ -46,6 +46,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Edit_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit_form.Designer.cs">
+      <DependentUpon>Edit_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HyppodromDataSet.cs">
+      <DependentUpon>HyppodromDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="HyppodromDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -65,6 +74,15 @@
     <Compile Include="Show_tables_form.Designer.cs">
       <DependentUpon>Show_tables_form.cs</DependentUpon>
     </Compile>
+    <Compile Include="Sql_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sql_form.Designer.cs">
+      <DependentUpon>Sql_form.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Edit_form.resx">
+      <DependentUpon>Edit_form.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Main_form.resx">
       <DependentUpon>Main_form.cs</DependentUpon>
     </EmbeddedResource>
@@ -79,6 +97,9 @@
     </Compile>
     <EmbeddedResource Include="Show_tables_form.resx">
       <DependentUpon>Show_tables_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sql_form.resx">
+      <DependentUpon>Sql_form.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="HyppodromDataSet.xsc">
       <DependentUpon>HyppodromDataSet.xsd</DependentUpon>

@@ -38,7 +38,7 @@ namespace IS_Hyppodrom
             betTableAdapter.Update(hyppodromDataSet.Bet);
             resTableAdapter.Update(hyppodromDataSet.Res);
             cynologistTableAdapter.Update(hyppodromDataSet.Cynologist);
-            horseTableAdapter.Update(hyppodromDataSet.Horse);
+            //horseTableAdapter.Update(hyppodromDataSet.Horse);
             raceTableAdapter.Update(hyppodromDataSet.Race);
         }
 
@@ -92,6 +92,55 @@ namespace IS_Hyppodrom
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void queryeditToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var sf = new Sql_form();
+            sf.ShowDialog();
+        }
+        private bool edit=true;
+        private void addToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+            if (!edit) return;
+            var edt = new Edit_form();
+            edt.ShowDialog();
+            horseTableAdapter.Fill(hyppodromDataSet.Horse);
+            hyppodromDataSet.AcceptChanges();
+        }   
+
+        private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // label2.Text = Convert.ToInt32(dataGridView1.SelectedCells[0].Value).ToString();
+            if (!edit) return;
+            horseTableAdapter.DeleteQuery(
+            Convert.ToInt32(dataGridView1.SelectedCells[0].Value)
+            );
+            horseTableAdapter.Fill(hyppodromDataSet.Horse);
+            hyppodromDataSet.AcceptChanges();
+        }
+
+        private void updateToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (!edit) return;
+            var st = new HyppodromDataSet.HorseDataTable();
+            horseTableAdapter.FillBy(st,
+            Convert.ToInt32(dataGridView1.SelectedCells[0].Value));
+            object[] row = st.Rows[0].ItemArray;
+            var edt = new Edit_form(
+            Convert.ToInt32(row[0]),
+            row[1].ToString(),
+            row[2].ToString(),
+            row[3].ToString(),
+           Convert.ToInt32(row[4]),
+            row[5].ToString(),
+            row[6].ToString(),
+            Convert.ToInt32(row[7])
+            );
+            edt.ShowDialog();
+            horseTableAdapter.Fill(hyppodromDataSet.Horse);
+            hyppodromDataSet.AcceptChanges();
         }
     }
 }

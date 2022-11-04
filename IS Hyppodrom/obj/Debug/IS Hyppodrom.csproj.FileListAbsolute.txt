@@ -10,3 +10,5 @@ C:\Users\khoty\Desktop\учеба 3.0\бд\курсач\Real_project\hippodrom\H
 C:\Users\khoty\Desktop\учеба 3.0\бд\курсач\Real_project\hippodrom\Hippodrom_main\IS Hyppodrom\obj\Debug\IS Hyppodrom.exe
 C:\Users\khoty\Desktop\учеба 3.0\бд\курсач\Real_project\hippodrom\Hippodrom_main\IS Hyppodrom\obj\Debug\IS Hyppodrom.pdb
 C:\Users\khoty\Desktop\учеба 3.0\бд\курсач\Real_project\hippodrom\Hippodrom_main\IS Hyppodrom\obj\Debug\IS_Hyppodrom.Show_tables_form.resources
+C:\Users\khoty\Desktop\учеба 3.0\бд\курсач\Real_project\hippodrom\Hippodrom_main\IS Hyppodrom\obj\Debug\IS_Hyppodrom.Sql_form.resources
+C:\Users\khoty\Desktop\учеба 3.0\бд\курсач\Real_project\hippodrom\Hippodrom_main\IS Hyppodrom\obj\Debug\IS_Hyppodrom.Edit_form.resources
