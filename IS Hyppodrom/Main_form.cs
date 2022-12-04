@@ -12,9 +12,16 @@ namespace IS_Hyppodrom
 {
     public partial class Main_form : Form
     {
+        int access;
         public Main_form()
         {
             InitializeComponent();
+        }
+        public Main_form(int a)
+        {
+            InitializeComponent();
+            access = a;
+           
         }
 
         private void Main_form_Load(object sender, EventArgs e)
@@ -141,6 +148,33 @@ namespace IS_Hyppodrom
             edt.ShowDialog();
             horseTableAdapter.Fill(hyppodromDataSet.Horse);
             hyppodromDataSet.AcceptChanges();
+        }
+
+        private void horseReportToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var sf = new FormReport1();
+            sf.ShowDialog();
+        }
+
+        private void futureRacesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var rf = new Request_Form();
+            rf.ShowDialog();
+        }
+
+        private void horseInfoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void previousRacesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void betRequestToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

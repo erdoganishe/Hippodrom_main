@@ -16,7 +16,7 @@ namespace IS_Hyppodrom
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Main_form());
+            Application.Run(new Login());
         }
     }
 }

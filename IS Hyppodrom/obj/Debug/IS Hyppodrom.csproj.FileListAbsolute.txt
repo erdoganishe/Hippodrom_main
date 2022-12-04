@@ -12,3 +12,10 @@ C:\Users\khoty\Desktop\учеба 3.0\бд\курсач\Real_project\hippodrom\H
 C:\Users\khoty\Desktop\учеба 3.0\бд\курсач\Real_project\hippodrom\Hippodrom_main\IS Hyppodrom\obj\Debug\IS_Hyppodrom.Show_tables_form.resources
 C:\Users\khoty\Desktop\учеба 3.0\бд\курсач\Real_project\hippodrom\Hippodrom_main\IS Hyppodrom\obj\Debug\IS_Hyppodrom.Sql_form.resources
 C:\Users\khoty\Desktop\учеба 3.0\бд\курсач\Real_project\hippodrom\Hippodrom_main\IS Hyppodrom\obj\Debug\IS_Hyppodrom.Edit_form.resources
+C:\Users\khoty\Desktop\учеба 3.0\бд\курсач\Real_project\hippodrom\Hippodrom_main\IS Hyppodrom\obj\Debug\IS_Hyppodrom.Login.resources
+C:\Users\khoty\Desktop\учеба 3.0\бд\курсач\Real_project\hippodrom\Hippodrom_main\IS Hyppodrom\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\khoty\Desktop\учеба 3.0\бд\курсач\Real_project\hippodrom\Hippodrom_main\IS Hyppodrom\bin\Debug\itextsharp.dll
+C:\Users\khoty\Desktop\учеба 3.0\бд\курсач\Real_project\hippodrom\Hippodrom_main\IS Hyppodrom\bin\Debug\itextsharp.xml
+C:\Users\khoty\Desktop\учеба 3.0\бд\курсач\Real_project\hippodrom\Hippodrom_main\IS Hyppodrom\obj\Debug\IS_Hyppodrom.FormReport1.resources
+C:\Users\khoty\Desktop\учеба 3.0\бд\курсач\Real_project\hippodrom\Hippodrom_main\IS Hyppodrom\obj\Debug\IS Hyppodrom.csproj.CopyComplete
+C:\Users\khoty\Desktop\учеба 3.0\бд\курсач\Real_project\hippodrom\Hippodrom_main\IS Hyppodrom\obj\Debug\IS_Hyppodrom.Request_Form.resources
