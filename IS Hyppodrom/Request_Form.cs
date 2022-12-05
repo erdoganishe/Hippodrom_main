@@ -14,10 +14,10 @@ namespace IS_Hyppodrom
     public partial class Request_Form : Form
     {
         const string ConnectionString = "Data Source=LAPTOP-NBBP6UE1;Initial Catalog = Hyppodrom; Integrated Security = True";
-        string select = "Select * from Race";
-        public Request_Form()
+       
+        public Request_Form(string select)
         {
-            InitializeComponent();        
+        InitializeComponent(); 
         SqlConnection sqlcon = new SqlConnection(ConnectionString);
         sqlcon.Open();
         SqlDataAdapter oda = new SqlDataAdapter(select, sqlcon);
@@ -25,7 +25,7 @@ namespace IS_Hyppodrom
         oda.Fill(dt);
         dataGridView1.DataSource = dt;
         sqlcon.Close();
-
+        dataGridView1.Height = 8+(dataGridView1.Rows.Count+2)*20;
         }
     }
 }

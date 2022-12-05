@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -158,23 +159,36 @@ namespace IS_Hyppodrom
 
         private void futureRacesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var rf = new Request_Form();
+            string select = "Select * from Race where state = 'Not passed'";
+            var rf = new Request_Form(select);             
             rf.ShowDialog();
         }
 
         private void horseInfoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            string select = "Select * from Horse";
+            var rf = new Request_Form(select);
+            rf.ShowDialog();
         }
 
         private void previousRacesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            string select = "Select * from Race where state = 'Passed'";
+            var rf = new Request_Form(select);
+            rf.ShowDialog();
         }
 
         private void betRequestToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            
+            var af = new AskForm();
+            af.ShowDialog();
+        }
 
+        private void betReportToolStripMenuItem_Click(object sender, EventArgs e)
+        {  
+            var sf = new FormReport2();
+            sf.ShowDialog();
         }
     }
 }

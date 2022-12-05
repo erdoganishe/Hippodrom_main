@@ -19,3 +19,5 @@ C:\Users\khoty\Desktop\учеба 3.0\бд\курсач\Real_project\hippodrom\H
 C:\Users\khoty\Desktop\учеба 3.0\бд\курсач\Real_project\hippodrom\Hippodrom_main\IS Hyppodrom\obj\Debug\IS_Hyppodrom.FormReport1.resources
 C:\Users\khoty\Desktop\учеба 3.0\бд\курсач\Real_project\hippodrom\Hippodrom_main\IS Hyppodrom\obj\Debug\IS Hyppodrom.csproj.CopyComplete
 C:\Users\khoty\Desktop\учеба 3.0\бд\курсач\Real_project\hippodrom\Hippodrom_main\IS Hyppodrom\obj\Debug\IS_Hyppodrom.Request_Form.resources
+C:\Users\khoty\Desktop\учеба 3.0\бд\курсач\Real_project\hippodrom\Hippodrom_main\IS Hyppodrom\obj\Debug\IS_Hyppodrom.FormReport2.resources
+C:\Users\khoty\Desktop\учеба 3.0\бд\курсач\Real_project\hippodrom\Hippodrom_main\IS Hyppodrom\obj\Debug\IS_Hyppodrom.AskForm.resources

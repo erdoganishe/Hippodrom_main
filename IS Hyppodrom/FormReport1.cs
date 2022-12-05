@@ -98,7 +98,7 @@ namespace IS_Hyppodrom
         private void getReport()
         {
             Document doc = new Document();
-            PdfWriter.GetInstance(doc, new FileStream("../../reports/1.pdf", FileMode.Create));
+            PdfWriter.GetInstance(doc, new FileStream($"../../reports/report1.{numericUpDown1.Value}.pdf", FileMode.Create));
             doc.Open();
             Paragraph p1 = new Paragraph(getQuery(Convert.ToInt32(numericUpDown1.Value)));             
             doc.Add(p1);
