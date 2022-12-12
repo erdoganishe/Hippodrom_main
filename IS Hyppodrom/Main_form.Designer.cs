@@ -49,6 +49,7 @@
             this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.resetelmentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.queryeditToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.searchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editformToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -61,6 +62,10 @@
             this.horseInfoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.previousRacesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.betRequestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.makeABetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.autoBetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripComboBox1 = new System.Windows.Forms.ToolStripComboBox();
+            this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.raceidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.datetimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -144,11 +149,14 @@
             this.viewToolStripMenuItem,
             this.editformToolStripMenuItem,
             this.reportsToolStripMenuItem,
-            this.topRequestsToolStripMenuItem});
+            this.topRequestsToolStripMenuItem,
+            this.makeABetToolStripMenuItem,
+            this.toolStripComboBox1,
+            this.toolStripTextBox1});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1038, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1038, 27);
             this.menuStrip1.TabIndex = 10;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -161,7 +169,7 @@
             this.betsToolStripMenuItem,
             this.resultsToolStripMenuItem});
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(67, 20);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(67, 23);
             this.toolStripMenuItem1.Text = "Database";
             // 
             // raceToolStripMenuItem
@@ -204,7 +212,7 @@
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 23);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // exitToolStripMenuItem
@@ -218,9 +226,10 @@
             // 
             this.viewToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.resetelmentToolStripMenuItem,
-            this.queryeditToolStripMenuItem});
+            this.queryeditToolStripMenuItem,
+            this.searchToolStripMenuItem});
             this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
-            this.viewToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
+            this.viewToolStripMenuItem.Size = new System.Drawing.Size(44, 23);
             this.viewToolStripMenuItem.Text = "View";
             // 
             // resetelmentToolStripMenuItem
@@ -237,6 +246,13 @@
             this.queryeditToolStripMenuItem.Text = "query_edit";
             this.queryeditToolStripMenuItem.Click += new System.EventHandler(this.queryeditToolStripMenuItem_Click);
             // 
+            // searchToolStripMenuItem
+            // 
+            this.searchToolStripMenuItem.Name = "searchToolStripMenuItem";
+            this.searchToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
+            this.searchToolStripMenuItem.Text = "Search";
+            this.searchToolStripMenuItem.Click += new System.EventHandler(this.searchToolStripMenuItem_Click);
+            // 
             // editformToolStripMenuItem
             // 
             this.editformToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -244,7 +260,7 @@
             this.deleteToolStripMenuItem,
             this.updateToolStripMenuItem});
             this.editformToolStripMenuItem.Name = "editformToolStripMenuItem";
-            this.editformToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
+            this.editformToolStripMenuItem.Size = new System.Drawing.Size(70, 23);
             this.editformToolStripMenuItem.Text = "Edit_form";
             // 
             // addToolStripMenuItem
@@ -274,7 +290,7 @@
             this.horseReportToolStripMenuItem,
             this.betReportToolStripMenuItem});
             this.reportsToolStripMenuItem.Name = "reportsToolStripMenuItem";
-            this.reportsToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
+            this.reportsToolStripMenuItem.Size = new System.Drawing.Size(59, 23);
             this.reportsToolStripMenuItem.Text = "Reports";
             // 
             // horseReportToolStripMenuItem
@@ -299,7 +315,7 @@
             this.previousRacesToolStripMenuItem,
             this.betRequestToolStripMenuItem});
             this.topRequestsToolStripMenuItem.Name = "topRequestsToolStripMenuItem";
-            this.topRequestsToolStripMenuItem.Size = new System.Drawing.Size(90, 20);
+            this.topRequestsToolStripMenuItem.Size = new System.Drawing.Size(90, 23);
             this.topRequestsToolStripMenuItem.Text = "Top-Requests";
             // 
             // futureRacesToolStripMenuItem
@@ -329,6 +345,33 @@
             this.betRequestToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
             this.betRequestToolStripMenuItem.Text = "Bet request";
             this.betRequestToolStripMenuItem.Click += new System.EventHandler(this.betRequestToolStripMenuItem_Click);
+            // 
+            // makeABetToolStripMenuItem
+            // 
+            this.makeABetToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.autoBetToolStripMenuItem});
+            this.makeABetToolStripMenuItem.Name = "makeABetToolStripMenuItem";
+            this.makeABetToolStripMenuItem.Size = new System.Drawing.Size(77, 23);
+            this.makeABetToolStripMenuItem.Text = "Make a bet";
+            // 
+            // autoBetToolStripMenuItem
+            // 
+            this.autoBetToolStripMenuItem.Name = "autoBetToolStripMenuItem";
+            this.autoBetToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
+            this.autoBetToolStripMenuItem.Text = "AutoBet";
+            this.autoBetToolStripMenuItem.Click += new System.EventHandler(this.autoBetToolStripMenuItem_Click);
+            // 
+            // toolStripComboBox1
+            // 
+            this.toolStripComboBox1.Name = "toolStripComboBox1";
+            this.toolStripComboBox1.Size = new System.Drawing.Size(121, 23);
+            // 
+            // toolStripTextBox1
+            // 
+            this.toolStripTextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.toolStripTextBox1.Name = "toolStripTextBox1";
+            this.toolStripTextBox1.Size = new System.Drawing.Size(100, 23);
+            this.toolStripTextBox1.TextChanged += new System.EventHandler(this.toolStripTextBox1_TextChanged);
             // 
             // dataGridView1
             // 
@@ -528,9 +571,9 @@
             this.label1.Location = new System.Drawing.Point(9, 61);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(65, 25);
+            this.label1.Size = new System.Drawing.Size(56, 25);
             this.label1.TabIndex = 11;
-            this.label1.Text = "Races";
+            this.label1.Text = "Race";
             // 
             // raceTableAdapter
             // 
@@ -644,5 +687,10 @@
         private System.Windows.Forms.ToolStripMenuItem previousRacesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem betRequestToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem betReportToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem makeABetToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem autoBetToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem searchToolStripMenuItem;
+        private System.Windows.Forms.ToolStripComboBox toolStripComboBox1;
+        private System.Windows.Forms.ToolStripTextBox toolStripTextBox1;
     }
 }

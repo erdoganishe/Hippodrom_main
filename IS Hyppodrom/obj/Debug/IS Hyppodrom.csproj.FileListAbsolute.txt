@@ -21,3 +21,24 @@ C:\Users\khoty\Desktop\учеба 3.0\бд\курсач\Real_project\hippodrom\H
 C:\Users\khoty\Desktop\учеба 3.0\бд\курсач\Real_project\hippodrom\Hippodrom_main\IS Hyppodrom\obj\Debug\IS_Hyppodrom.Request_Form.resources
 C:\Users\khoty\Desktop\учеба 3.0\бд\курсач\Real_project\hippodrom\Hippodrom_main\IS Hyppodrom\obj\Debug\IS_Hyppodrom.FormReport2.resources
 C:\Users\khoty\Desktop\учеба 3.0\бд\курсач\Real_project\hippodrom\Hippodrom_main\IS Hyppodrom\obj\Debug\IS_Hyppodrom.AskForm.resources
+C:\Users\khoty\Desktop\учеба 3.0\бд\курсач\Real_project\hippodrom\Hippodrom_main\IS Hyppodrom\bin\Debug\Google.Apis.Auth.dll
+C:\Users\khoty\Desktop\учеба 3.0\бд\курсач\Real_project\hippodrom\Hippodrom_main\IS Hyppodrom\bin\Debug\Google.Apis.Auth.PlatformServices.dll
+C:\Users\khoty\Desktop\учеба 3.0\бд\курсач\Real_project\hippodrom\Hippodrom_main\IS Hyppodrom\bin\Debug\Google.Apis.Core.dll
+C:\Users\khoty\Desktop\учеба 3.0\бд\курсач\Real_project\hippodrom\Hippodrom_main\IS Hyppodrom\bin\Debug\Google.Apis.dll
+C:\Users\khoty\Desktop\учеба 3.0\бд\курсач\Real_project\hippodrom\Hippodrom_main\IS Hyppodrom\bin\Debug\Google.Apis.PlatformServices.dll
+C:\Users\khoty\Desktop\учеба 3.0\бд\курсач\Real_project\hippodrom\Hippodrom_main\IS Hyppodrom\bin\Debug\Google.Apis.Sheets.v4.dll
+C:\Users\khoty\Desktop\учеба 3.0\бд\курсач\Real_project\hippodrom\Hippodrom_main\IS Hyppodrom\bin\Debug\Newtonsoft.Json.dll
+C:\Users\khoty\Desktop\учеба 3.0\бд\курсач\Real_project\hippodrom\Hippodrom_main\IS Hyppodrom\bin\Debug\Google.Apis.pdb
+C:\Users\khoty\Desktop\учеба 3.0\бд\курсач\Real_project\hippodrom\Hippodrom_main\IS Hyppodrom\bin\Debug\Google.Apis.xml
+C:\Users\khoty\Desktop\учеба 3.0\бд\курсач\Real_project\hippodrom\Hippodrom_main\IS Hyppodrom\bin\Debug\Google.Apis.Auth.pdb
+C:\Users\khoty\Desktop\учеба 3.0\бд\курсач\Real_project\hippodrom\Hippodrom_main\IS Hyppodrom\bin\Debug\Google.Apis.Auth.xml
+C:\Users\khoty\Desktop\учеба 3.0\бд\курсач\Real_project\hippodrom\Hippodrom_main\IS Hyppodrom\bin\Debug\Google.Apis.Core.pdb
+C:\Users\khoty\Desktop\учеба 3.0\бд\курсач\Real_project\hippodrom\Hippodrom_main\IS Hyppodrom\bin\Debug\Google.Apis.Core.xml
+C:\Users\khoty\Desktop\учеба 3.0\бд\курсач\Real_project\hippodrom\Hippodrom_main\IS Hyppodrom\bin\Debug\Google.Apis.Sheets.v4.pdb
+C:\Users\khoty\Desktop\учеба 3.0\бд\курсач\Real_project\hippodrom\Hippodrom_main\IS Hyppodrom\bin\Debug\Google.Apis.Sheets.v4.xml
+C:\Users\khoty\Desktop\учеба 3.0\бд\курсач\Real_project\hippodrom\Hippodrom_main\IS Hyppodrom\bin\Debug\Newtonsoft.Json.xml
+C:\Users\khoty\Desktop\учеба 3.0\бд\курсач\Real_project\hippodrom\Hippodrom_main\IS Hyppodrom\obj\Debug\IS_Hyppodrom.AutoBetForm.resources
+C:\Users\khoty\Desktop\учеба 3.0\бд\курсач\Real_project\hippodrom\Hippodrom_main\IS Hyppodrom\bin\Debug\IS Hyppodrom.exe.manifest
+C:\Users\khoty\Desktop\учеба 3.0\бд\курсач\Real_project\hippodrom\Hippodrom_main\IS Hyppodrom\bin\Debug\IS Hyppodrom.application
+C:\Users\khoty\Desktop\учеба 3.0\бд\курсач\Real_project\hippodrom\Hippodrom_main\IS Hyppodrom\obj\Debug\IS Hyppodrom.exe.manifest
+C:\Users\khoty\Desktop\учеба 3.0\бд\курсач\Real_project\hippodrom\Hippodrom_main\IS Hyppodrom\obj\Debug\IS Hyppodrom.application

@@ -38,6 +38,12 @@ namespace IS_Hyppodrom
             // TODO: данная строка кода позволяет загрузить данные в таблицу "hyppodromDataSet.Race". При необходимости она может быть перемещена или удалена.
             this.raceTableAdapter.Fill(this.hyppodromDataSet.Race);
             dataGridView1.AutoGenerateColumns = true;
+            toolStripComboBox1.Items.Clear();
+            for (int i = 0; i < dataGridView1.Columns.Count; i++)
+            {
+                toolStripComboBox1.Items.Add(dataGridView1.Columns[i].HeaderText.ToString());
+            }
+            toolStripComboBox1.SelectedItem = toolStripComboBox1.Items[0];
 
         }
 
@@ -48,41 +54,73 @@ namespace IS_Hyppodrom
             cynologistTableAdapter.Update(hyppodromDataSet.Cynologist);
             //horseTableAdapter.Update(hyppodromDataSet.Horse);
             raceTableAdapter.Update(hyppodromDataSet.Race);
+            
         }
 
         private void horseToolStripMenuItem_Click(object sender, EventArgs e)
         {
             bindingNavigator1.BindingSource = horseBindingSource;
             dataGridView1.DataSource = horseBindingSource;
-            label1.Text = "Horses";
+            label1.Text = "Horse";
+            toolStripComboBox1.Items.Clear();
+            for (int i=0; i < dataGridView1.Columns.Count; i++) {
+                toolStripComboBox1.Items.Add(dataGridView1.Columns[i].HeaderText.ToString());
+            }
+            toolStripComboBox1.SelectedItem = toolStripComboBox1.Items[0];
         }
 
         private void raceToolStripMenuItem_Click(object sender, EventArgs e)
         {
             bindingNavigator1.BindingSource = raceBindingSource;
             dataGridView1.DataSource = raceBindingSource;
-            label1.Text = "Races";
+            label1.Text = "Race";
+            toolStripComboBox1.Items.Clear();
+            for (int i = 0; i < dataGridView1.Columns.Count; i++)
+            {
+                toolStripComboBox1.Items.Add(dataGridView1.Columns[i].HeaderText.ToString());
+            }
+            toolStripComboBox1.SelectedItem = toolStripComboBox1.Items[0];
         }
 
         private void cynologistsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             bindingNavigator1.BindingSource = cynologistBindingSource;
             dataGridView1.DataSource = cynologistBindingSource;
-            label1.Text = "Cynologists";
+            label1.Text = "Cynologist";
+            toolStripComboBox1.Items.Clear();
+            for (int i = 0; i < dataGridView1.Columns.Count; i++)
+            {
+                toolStripComboBox1.Items.Add(dataGridView1.Columns[i].HeaderText.ToString());
+            }
+            toolStripComboBox1.SelectedItem = toolStripComboBox1.Items[0];
         }
 
         private void betsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             bindingNavigator1.BindingSource = betBindingSource;
             dataGridView1.DataSource = betBindingSource;
-            label1.Text = "Bets";
+            this.betTableAdapter.Fill(this.hyppodromDataSet.Bet);
+            label1.Text = "Bet";
+            toolStripComboBox1.Items.Clear();
+            for (int i = 0; i < dataGridView1.Columns.Count; i++)
+            {
+                toolStripComboBox1.Items.Add(dataGridView1.Columns[i].HeaderText.ToString());
+                
+            }
+            toolStripComboBox1.SelectedItem = toolStripComboBox1.Items[0];
         }
 
         private void resultsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             bindingNavigator1.BindingSource = resBindingSource;
             dataGridView1.DataSource = resBindingSource;
-            label1.Text = "Results";
+            label1.Text = "Res";
+            toolStripComboBox1.Items.Clear();
+            for (int i = 0; i < dataGridView1.Columns.Count; i++)
+            {
+                toolStripComboBox1.Items.Add(dataGridView1.Columns[i].HeaderText.ToString());
+            }
+            toolStripComboBox1.SelectedItem = toolStripComboBox1.Items[0];
         }
 
         private void resetelmentToolStripMenuItem_Click(object sender, EventArgs e)
@@ -94,8 +132,8 @@ namespace IS_Hyppodrom
             raceTableAdapter.Fill(hyppodromDataSet.Race);
             cynologistTableAdapter.Fill(hyppodromDataSet.Cynologist);
             resTableAdapter.Fill(hyppodromDataSet.Res);
-
         }
+        
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -189,6 +227,28 @@ namespace IS_Hyppodrom
         {  
             var sf = new FormReport2();
             sf.ShowDialog();
+        }
+        private void autoBetToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var ab = new AutoBetForm();
+            ab.ShowDialog();
+        }
+
+        private void searchToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripTextBox1_TextChanged(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(toolStripTextBox1.Text) && toolStripComboBox1.SelectedItem != null) { 
+                if (label1.Text=="Race") raceBindingSource.Filter = string.Format($"{toolStripComboBox1.SelectedItem} like '%{toolStripTextBox1.Text}%'");
+                if (label1.Text == "Horse") horseBindingSource.Filter = string.Format($"{toolStripComboBox1.SelectedItem} like '%{toolStripTextBox1.Text}%'");
+                if (label1.Text == "Bet") betBindingSource.Filter = string.Format($"{toolStripComboBox1.SelectedItem} like '%{toolStripTextBox1.Text}%'");
+                if (label1.Text == "Res") resBindingSource.Filter = string.Format($"{toolStripComboBox1.SelectedItem} like '%{toolStripTextBox1.Text}%'");
+                if (label1.Text == "Cynologist") cynologistBindingSource.Filter = string.Format($"{toolStripComboBox1.SelectedItem} like '%{toolStripTextBox1.Text}%'");
+            }
+           
         }
     }
 }

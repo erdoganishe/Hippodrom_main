@@ -15,6 +15,25 @@ namespace IS_Hyppodrom
     {
         bool isLogin = true;
         const string ConnectionString = "Data Source=LAPTOP-NBBP6UE1;Initial Catalog = Hyppodrom; Integrated Security = True";
+
+        bool IsValidEmail(string email)
+        {
+            var trimmedEmail = email.Trim();
+
+            if (trimmedEmail.EndsWith("."))
+            {
+                return false; 
+            }
+            try
+            {
+                var addr = new System.Net.Mail.MailAddress(email);
+                return addr.Address == trimmedEmail;
+            }
+            catch
+            {
+                return false;
+            }
+        }
         private void login_in_a(bool log)
         {
             if (log)
@@ -47,13 +66,21 @@ namespace IS_Hyppodrom
                 string login = "";
                 string password = "";
                 string conpassword = "";
+                string email = "";
+                
 
                 login = Login_textbox.Text;
+                email = EmailTextBox.Text;
                 password = Password_textBox.Text;
                 conpassword = Confirm_TextBox.Text;
-                if (login == "" || password == "")
+                if (login == "" || password == "" || email=="")
                 {
-                    Falsepas.Text = "Choose your login and password";
+                    Falsepas.Text = "Choose your login and password and email";
+                }
+                else
+                if (!IsValidEmail(email))
+                {
+                    Falsepas.Text = "Your email isn`t correct";
                 }
                 else
                 {
@@ -64,7 +91,7 @@ namespace IS_Hyppodrom
                     else
                     {
                         SqlConnection sqlcon = new SqlConnection(ConnectionString);
-                        string select = $"select login from Users";
+                        string select = $"select login, email from Users";
                         sqlcon.Open();
                         SqlDataAdapter adapter = new SqlDataAdapter(select, sqlcon);
                         DataSet dataSet = new DataSet();
@@ -73,18 +100,18 @@ namespace IS_Hyppodrom
                         int count = dataSet.Tables[0].Rows.Count;
                         for (int i =0; i< count;i++)
                         {
-                            if (dataSet.Tables[0].Rows[i][0].ToString() == login)
+                            if (dataSet.Tables[0].Rows[i][0].ToString() == login || dataSet.Tables[0].Rows[i][1].ToString() == email)
                             {
                                 isTheSame = true;
                             }
                         }
                         if (isTheSame)
                         {
-                            Falsepas.Text = "This login alreadey exists";
+                            Falsepas.Text = "This login or email alreadey exists";
                         }
                         else
                         {
-                            string update = $"Insert into Users (user_id, login, password, access) values ({count+1}, '{login}', '{password}', 3)";
+                            string update = $"Insert into Users (user_id, login, password, email, access) values ({count+1}, '{login}', '{password}', '{email}', 3)";
                             
                             SqlCommand sqlCommand = new SqlCommand();
                             sqlCommand.Connection = sqlcon;
@@ -116,6 +143,8 @@ namespace IS_Hyppodrom
             InitializeComponent();
             Confirm_label.Hide();
             Confirm_TextBox.Hide();
+            label6.Hide();
+            EmailTextBox.Hide();
         }
 
         private void Login_button_Click(object sender,
@@ -132,26 +161,32 @@ namespace IS_Hyppodrom
                 label4.Text="Log in";
                 label3.Text = "Back to loggining in";
                 Login_button.Location = new Point(Login_button.Location.X,
-                    Login_button.Location.Y + 30);
+                    Login_button.Location.Y + 60);
                 Confirm_label.Show();
                 Confirm_TextBox.Show();
                 Falsepas.Text = "";
                 isLogin = false;
                 Login_button.Text = "Register";
                 label5.Text = "Create New Account";
+                label6.Show();
+                EmailTextBox.Show();
             }
             else
             {
                 label4.Text = "Sing up";
                 label3.Text = "Do not have an account?";
                 Login_button.Location = new Point(Login_button.Location.X,
-                    Login_button.Location.Y - 30);
+                    Login_button.Location.Y - 60);
                 Confirm_label.Hide();
                 Confirm_TextBox.Hide();
+                Confirm_TextBox.Text = "";
                 Falsepas.Text = "";
                 isLogin = true;
                 Login_button.Text = "Login";
                 label5.Text = "Login First";
+                label6.Hide();                
+                EmailTextBox.Hide();
+                EmailTextBox.Text = "";
 
             }
             

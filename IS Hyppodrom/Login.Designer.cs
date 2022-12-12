@@ -41,6 +41,8 @@
             this.hyppodromDataSet1 = new IS_Hyppodrom.HyppodromDataSet();
             this.Confirm_label = new System.Windows.Forms.Label();
             this.Confirm_TextBox = new System.Windows.Forms.TextBox();
+            this.EmailTextBox = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.hyppodromDataSet1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -138,7 +140,7 @@
             this.Falsepas.AutoSize = true;
             this.Falsepas.Font = new System.Drawing.Font("Georgia", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Falsepas.ForeColor = System.Drawing.Color.Red;
-            this.Falsepas.Location = new System.Drawing.Point(45, 203);
+            this.Falsepas.Location = new System.Drawing.Point(38, 252);
             this.Falsepas.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Falsepas.Name = "Falsepas";
             this.Falsepas.Size = new System.Drawing.Size(0, 23);
@@ -169,6 +171,26 @@
             this.Confirm_TextBox.Size = new System.Drawing.Size(172, 28);
             this.Confirm_TextBox.TabIndex = 10;
             // 
+            // EmailTextBox
+            // 
+            this.EmailTextBox.Font = new System.Drawing.Font("Georgia", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.EmailTextBox.Location = new System.Drawing.Point(206, 164);
+            this.EmailTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.EmailTextBox.Name = "EmailTextBox";
+            this.EmailTextBox.Size = new System.Drawing.Size(172, 28);
+            this.EmailTextBox.TabIndex = 12;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Georgia", 12.8F);
+            this.label6.Location = new System.Drawing.Point(134, 168);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(63, 21);
+            this.label6.TabIndex = 13;
+            this.label6.Text = "Email:";
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -176,6 +198,8 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(919, 397);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.EmailTextBox);
             this.Controls.Add(this.Confirm_TextBox);
             this.Controls.Add(this.Confirm_label);
             this.Controls.Add(this.Falsepas);
@@ -211,5 +235,7 @@
         private System.Windows.Forms.Label Falsepas;
         private System.Windows.Forms.Label Confirm_label;
         private System.Windows.Forms.TextBox Confirm_TextBox;
+        private System.Windows.Forms.TextBox EmailTextBox;
+        private System.Windows.Forms.Label label6;
     }
 }

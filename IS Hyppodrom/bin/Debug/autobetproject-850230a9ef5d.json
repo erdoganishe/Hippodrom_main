@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "autobetproject",
+  "private_key_id": "850230a9ef5dbc0b4c323fc647da3e74a069a3cd",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDcmu/JuxNbN60a\nsDrM/7nX+ot3/e2tGRtJ2MEJQZAslCgCXxLMHJZAXdnBhj9NYBn0NCPFqX4yCQfP\nXzNpBeuiwbKh+mucjy/iaUnQMMS0FxJZeAYd1s/B6E2iPT144m79FMmOENiGdadw\nmKp9++277gJD02bgHC/aL56aUcMtqNZgx4cAlSiO+LTdaM0ATUANjfJPZjXJJb39\n++dDp/xmJrzFUwN36NFTzsq2Ct0N4jiFlBEhk/NXPT6gl+lcIk0s0Saky8EDqK7i\noFKmAH0tecx3DgETyMDqvDdAFBAeOg3LLn9O/Oi5pvKmrpOyrfenONebD32a6uMx\nUHm8JrWfAgMBAAECggEAIik57ZazEiKGg0X77QfCmw/Yrg2b0vy6zY4rokfNUCHn\nKirXydS5baE62a10uwIhMsAqM+8htBTS6UlYODCrAwqUo2GYbWd85kYgoIUUyMBz\n3nfoFpHPnTrgXrm1/bSutDEWXxH7vaKVeamiaRzsfPgH0MH5QcYLoPFT0ZjMrRKY\n9Od3WhMVl+xwa541sWR5usUll4FOPHZ2h69if58pLDW1YH5pDR6sbaBgKoh0Z8K6\n4fQbwOssAemRYiWEwhigshglX7iuOqADnvASPkCuWeYJxSukhenwaQER0uw6UeHO\n3XCnAckS1iOIfiI0vO+8GHWlqPpNtYSa6mzd+2YmrQKBgQDzWrF/o7fVDYN1OCEz\nhwaHFXaNIbxlnYZPo/sQUMRj9/ZsdYqno9HYuQYPZq0C9RyPEek06GPfNF649AXh\nHlNJFBrMyJrXP4gBCSIVJw35iKh+sIl7xUtMXGmgHU6Xga7ZyKlu6djcnVrETR1z\nkW9cA5TktW9DvoCEp9qf8aQPnQKBgQDoEZ2ydzOUiV2HLvTnHW0jQ0QmCQ0eluOG\n98Pdfp8DQ2WWa6l+ibHAwriKzcsUWXJWu6xufgEsg7HtxiBRh+x8Cagf67QMdLl9\nButSqhjnmPOrTlVbYWw0n6PvHA9jV/2Ro+lWG2epMkWupF4pK2k882WjmQelPMf+\nuuhZ53c7awKBgDpm2ZI4SDXpOFM5VT54eSiSDhFwtzXrx//06pvPxlH3gDwnOU9i\nEUphnQK1MXA0QtZTBhSccNtwRgs9BOwxyusO2B+tRPvDU3BsMLHC3ae1FDrTQytg\n/eEljHPQlLvnc37wmTj1BgZr/Qx/NUI29PKwKVt572ninhU380/PPgBBAoGADncS\nok4ly+toBgYaQ9GkvN7zf39u7uou0nndHpBG7xgjW+XoEbgZeU9p21UKhIEyzE80\nZ0q5XgHzdEO2Pf6/8ddUQHEbru8TpMRqpKNvm/f/sDzYuzJuYTVWLZBNMT8J0isq\nXzCkHHrCtykNqXlIPQFa44ClZlpMiQczdm8kEnMCgYEAs/fRv/4/hGjX9q7EXrmT\nShlz/RzYBowwdo3xqbgPNIRJDgU0xhWFN4oZRP6FjezVQEW7jJZ+Qb2Lj9G5dXLO\n0DMrQEaI53HOTkXZLrtYDirGOJzJ5CkTHbtypIFRBXuJmp1Yk8/v2K9FKdM5sB/4\nq/9Tdy038lO51Z0YLnFqGe4=\n-----END PRIVATE KEY-----\n",
+  "client_email": "autobetproject@autobetproject.iam.gserviceaccount.com",
+  "client_id": "103356595328050569842",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/autobetproject%40autobetproject.iam.gserviceaccount.com"
+}
